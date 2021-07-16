@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { timingSafeEqual } from 'crypto';
+//import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-root',
@@ -56,8 +56,6 @@ export class AppComponent {
 
   llamarParImpar(mensaje:string){
     this.mensaje = mensaje;
-
-
   }
 
 
