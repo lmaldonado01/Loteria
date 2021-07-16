@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BalotaComponent } from './balota/balota.component';
+import { ParImparComponent } from './par-impar/par-impar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BalotaComponent
+    BalotaComponent,
+    ParImparComponent
   ],
   imports: [
     BrowserModule,

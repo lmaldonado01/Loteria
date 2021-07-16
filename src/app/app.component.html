@@ -314,7 +314,7 @@
 
 
 
-    <span> Empecemos!</span>
+    <span>  Empecemos!</span>
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -332,13 +332,18 @@
 
 <hr>
 <div style="text-align: center;">
-  <button class="btn btn-info" (click)="jugar">JUGAR</button>
+  <button class="btn btn-info" (click)="jugar()" >JUGAR</button>
   <hr>
   <h2> {{numGanador}} </h2>
+
+  <app-par-impar [valor]="suma" (parImpar)="llamarParImpar($event)" #calculo></app-par-impar>
+
+  <div>
+    <h3>{{mensaje}}</h3>
+  </div>
+
+
 </div>
-
-
-
 
 
 <router-outlet></router-outlet>

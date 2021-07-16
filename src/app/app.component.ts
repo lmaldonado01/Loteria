@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  tittle = 'loteria';
+
   valor1: number;
   valor2: number;
   valor3: number;
   valor4: number;
   numGanador: string;
   mensaje: string;
+
+  suma: number;
 
   constructor(){
     this.valor1 = -1;
@@ -21,6 +26,8 @@ export class AppComponent {
     this.valor4 = -1;
     this.numGanador = "";
     this.mensaje = "";
+
+    this.suma =0;
   }
 
   obtenerBalota(){
@@ -43,6 +50,17 @@ export class AppComponent {
      ${this.valor2}
      ${this.valor3}
      ${this.valor4}`;
+
+    this.suma = this.valor1 + this.valor2 + this.valor3 + this.valor4;
   }
+
+  llamarParImpar(mensaje:string){
+    this.mensaje = mensaje;
+
+
+  }
+
+
+
 
 }
